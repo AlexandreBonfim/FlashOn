@@ -3,7 +3,7 @@ import { Image, View } from 'react-native';
 import { inject } from 'mobx-react';
 
 @inject("stores")
-export default class SplashScreen extends Component {
+export default class SignUp extends Component {
   constructor(props) {
     super(props)
   }
