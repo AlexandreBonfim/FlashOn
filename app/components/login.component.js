@@ -55,11 +55,11 @@ export default class Login extends Component {
         </Item>
         <Button rounded block style={{marginBottom: 10}}
           onPress={this.signIn.bind(this)}>
-          <Text>Login</Text>
+          <Text style={{fontWeight: '700', textAlign: 'center'}}>Login</Text>
         </Button>
         <Button rounded block style={{marginBottom: 10}}
           onPress={this.signUp.bind(this)}>
-          <Text>Facebook</Text>
+          <Text style={{fontWeight: '700'}}>Facebook</Text>
         </Button>
         <Text>Don't have access SignUp</Text>
       </Form>
