@@ -33,6 +33,7 @@ export default class Login extends Component {
         navigate('SignUp')
       })
   }
+  
   render() {
     const { auth } = this.props.stores
     return (
@@ -58,9 +59,9 @@ export default class Login extends Component {
         </Button>
         <Button rounded block style={{marginBottom: 10}}
           onPress={this.signUp.bind(this)}>
-          <Text>SignUp</Text>
+          <Text>Facebook</Text>
         </Button>
-       
+        <Text>Don't have access SignUp</Text>
       </Form>
     )
   }
