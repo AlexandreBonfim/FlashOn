@@ -1,8 +1,8 @@
 import React from 'react';
 import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 'react-navigation';
-import SplashScreen from './screens/splash.screen';
+import SplashScreen from './screens/signUp.screen';
 import LoginScreen from './screens/login.screen';
-import MatchScreen from './screens/match.screen';
+import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
 import {ScrollView } from 'react-native';
 import {
@@ -11,7 +11,7 @@ import {
 } from 'native-base';
 
 const hiddenItems = [
-  'Splash',
+  //'Splash',
   'Login'
 ];
 
@@ -35,24 +35,32 @@ const MenuButton = ({navigate}) => (
     <Icon style={{color: "#fff"}} size={28} name="menu"/>
   </Button>
 )
-const Splash = {
+/*const Splash = {
   screen: SplashScreen,
   navigationOptions: {
     header: null
   }
-}
+}*/
+
 const Login = {
   screen: LoginScreen,
   navigationOptions: {
     header: null
   }
 }
-const Match = {
-  screen: MatchScreen,
+const SignUp = {
+  screen: SignUp,
   navigationOptions: {
     headerMode: 'screen',
-    headerTitle: 'Home',
-    drawerLabel: 'Home'
+    headerTitle: 'Sign Up'
+  }
+}
+const Main = {
+  screen: MainScreen,
+  navigationOptions: {
+    headerMode: 'screen',
+    headerTitle: 'Main',
+    drawerLabel: 'Main'
   }
 }
 const Post = {
@@ -63,7 +71,7 @@ const Post = {
   }
 }
 const MatchStack = StackNavigator({
-  Match: Match,
+  Main: Main,
   Post: Post
 },{
   navigationOptions: ({navigation, HeaderProps}) => ({

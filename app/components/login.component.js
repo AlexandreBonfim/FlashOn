@@ -23,25 +23,33 @@ export default class Login extends Component {
     const { navigate } = this.props.navigation
     auth.signIn({email: this.email, password: this.password})
       .then(() => {
-        navigate('Match')
+        navigate('Main')
       })
   }
+  
+  signUp() {
+    const { navigate } = this.props.navigation
+      .then(() => {
+        navigate('SignUp')
+      })
+  }
+  
   render() {
     const { auth } = this.props.stores
     return (
       <Form>
         <Item style={{marginBottom: 10}} rounded>
-          <Icon style={{color: "#fff"}} name="ios-person-outline"/>
-          <Input style={{color: "#fff"}} 
+          <Icon style={{color: "#ddd"}} name="ios-person-outline"/>
+          <Input style={{color: "#ddd"}} 
             placeholder='Please Enter Email'
-            placeholderTextColor="#fff"
+            placeholderTextColor="#ddd"
             onChangeText={(email) => this.email = email}/>
         </Item>
         <Item style={{marginBottom: 10}} rounded>
-          <Icon style={{color: "#fff"}} name="ios-lock"/>
-          <Input style={{color: "#fff"}} 
+          <Icon style={{color: "#ddd"}} name="ios-lock"/>
+          <Input style={{color: "#ddd"}} 
             placeholder='Please Enter Password'
-            placeholderTextColor="#fff"
+            placeholderTextColor="#ddd"
             secureTextEntry={true}
             onChangeText={(pass) => this.password = pass}/>
         </Item>
@@ -49,6 +57,11 @@ export default class Login extends Component {
           onPress={this.signIn.bind(this)}>
           <Text>Login</Text>
         </Button>
+        <Button rounded block style={{marginBottom: 10}}
+          onPress={this.signUp.bind(this)}>
+          <Text>Facebook</Text>
+        </Button>
+        <Text>Don't have access SignUp</Text>
       </Form>
     )
   }

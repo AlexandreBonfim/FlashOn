@@ -41,20 +41,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
   },
   loginBackground: {
     flex: 1,
     width: null,
-    height: null
+    height: null,
+    resizeMode: "contain"
   },
   loginForeground: {
     flex:1,
-    marginTop: Dimensions.get('window').height/1.75,
-    paddingTop: 20,
+    marginTop: Dimensions.get('window').height/1.30,
+    paddingTop: 50,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 90,
+    paddingBottom: 9,
     bottom: 0
   }
 })

@@ -5,7 +5,8 @@ const config = {
   authDomain: "flashon-880e5.firebaseapp.com",
   databaseURL: "https://flashon-880e5.firebaseio.com",
   projectId: "flashon-880e5",
-  storageBucket: "flashon-880e5.appspot.com"
+  storageBucket: "flashon-880e5.appspot.com",
+  messagingSenderId: "13865922790"
 };
 
 export default class ConfigStore {
@@ -13,7 +14,7 @@ export default class ConfigStore {
     firebase.initializeApp(config)
     this.splashTime = 1000
     this.splashImg = require('../../images/splash.jpg')
-    this.loginBG = require('../../images/login.jpg')
+    this.loginBG = require('../../images/flash.png')
   }
   get SplashImg() {
     return this.splashImg
