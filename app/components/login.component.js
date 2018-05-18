@@ -5,7 +5,8 @@ import {
   Input,
   Icon,
   Text,
-  Form
+  Form,
+  View
 } from 'native-base';
 import { observer } from 'mobx-react/native';
 import { observable } from 'mobx';
@@ -27,29 +28,23 @@ export default class Login extends Component {
       })
   }
   
-  signUp() {
-    const { navigate } = this.props.navigation
-      .then(() => {
-        navigate('SignUp')
-      })
-  }
-  
   render() {
     const { auth } = this.props.stores
     return (
+      
       <Form>
         <Item style={{marginBottom: 10}} rounded>
-          <Icon style={{color: "#ddd"}} name="ios-person-outline"/>
-          <Input style={{color: "#ddd"}} 
+          <Icon style={{color: "#808080"}} name="ios-person-outline"/>
+          <Input style={{color: "#808080"}} 
             placeholder='Please Enter Email'
-            placeholderTextColor="#ddd"
+            placeholderTextColor="#808080"
             onChangeText={(email) => this.email = email}/>
         </Item>
         <Item style={{marginBottom: 10}} rounded>
-          <Icon style={{color: "#ddd"}} name="ios-lock"/>
-          <Input style={{color: "#ddd"}} 
+          <Icon style={{color: "#808080"}} name="ios-lock"/>
+          <Input style={{color: "#808080"}} 
             placeholder='Please Enter Password'
-            placeholderTextColor="#ddd"
+            placeholderTextColor="#808080"
             secureTextEntry={true}
             onChangeText={(pass) => this.password = pass}/>
         </Item>
@@ -57,12 +52,11 @@ export default class Login extends Component {
           onPress={this.signIn.bind(this)}>
           <Text>Login</Text>
         </Button>
-        <Button rounded block style={{marginBottom: 10}}
+        {/* <Button rounded block style={{marginBottom: 10}}
           onPress={this.signUp.bind(this)}>
           <Text>Facebook</Text>
-        </Button>
-        <Text>Don't have access SignUp</Text>
-      </Form>
+        </Button>                        */}
+      </Form>               
     )
   }
 }

@@ -6,7 +6,9 @@ import {
 import {
   View,
   Image,
+  Text,
   StyleSheet,
+  TouchableOpacity,
   Dimensions
 } from 'react-native';
 import { inject } from 'mobx-react';
@@ -18,6 +20,13 @@ export default class LoginScreen extends Component {
   constructor(props) {
     super(props)
   }
+
+//Function to navigate to SignUp
+signUp() {
+  const { navigate } = this.props.navigation
+      navigate('SignUp')
+}
+
   render() {
     const {stores} = this.props
     return (
@@ -27,6 +36,18 @@ export default class LoginScreen extends Component {
             <Image style={styles.loginBackground} source={stores.config.LoginBG}>
               <View style={styles.loginForeground}>
                 <Login {...this.props}/>
+              </View>
+
+              {/* hiperlink text */}
+              <View style={styles.signUpContent}>              
+              <Text style={styles.signUpText}>Don't have access </Text>
+              
+              {/* Set Opacity when clicked btn SignUp */}
+              <TouchableOpacity onPress={this.signUp.bind(this)}>
+               <Text style={{color: 'blue'}}>                
+                  SignUp 
+                </Text>
+              </TouchableOpacity>
               </View>
             </Image>
           </Content>
@@ -57,5 +78,18 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 9,
     bottom: 0
+  },
+  signUpContent: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginVertical: 16
+
+  },
+  signUpText:{
+    color: '#808080',
+    fontSize: 16
+
   }
 })

@@ -1,6 +1,6 @@
 import React from 'react';
 import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 'react-navigation';
-import SplashScreen from './screens/signUp.screen';
+import SignUpScreen from './screens/signUp.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
@@ -11,7 +11,7 @@ import {
 } from 'native-base';
 
 const hiddenItems = [
-  //'Splash',
+  'Splash',
   'Login'
 ];
 
@@ -35,12 +35,12 @@ const MenuButton = ({navigate}) => (
     <Icon style={{color: "#fff"}} size={28} name="menu"/>
   </Button>
 )
-/*const Splash = {
-  screen: SplashScreen,
+const SignUp = {
+  screen: SignUpScreen,
   navigationOptions: {
     header: null
   }
-}*/
+}
 
 const Login = {
   screen: LoginScreen,
@@ -48,13 +48,14 @@ const Login = {
     header: null
   }
 }
-const SignUp = {
-  screen: SignUp,
-  navigationOptions: {
-    headerMode: 'screen',
-    headerTitle: 'Sign Up'
-  }
-}
+// const SignUp = {
+//   screen: SignUp,
+//   navigationOptions: {
+//     headerMode: 'screen',
+//     headerTitle: 'Sign Up'
+//   }
+// }
+
 const Main = {
   screen: MainScreen,
   navigationOptions: {
@@ -72,6 +73,7 @@ const Post = {
 }
 const MatchStack = StackNavigator({
   Main: Main,
+  SignUp: SignUp,
   Post: Post
 },{
   navigationOptions: ({navigation, HeaderProps}) => ({
@@ -81,7 +83,7 @@ const MatchStack = StackNavigator({
   }) 
 })
 const RouteConfig = {
-  initialRoute: 'Splash',
+  initialRoute: 'Login',
   contentComponent: SideBar,
   navigationOptions: {
     gesturesEnabled: false
