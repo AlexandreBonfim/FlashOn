@@ -27,6 +27,10 @@ export default class Login extends Component {
         navigate('Main')
       })
   }
+
+  handleFB = (()=>{
+    console.log('Facebook Pressed.');
+  });
   
   render() {
     const { auth } = this.props.stores
@@ -52,10 +56,10 @@ export default class Login extends Component {
           onPress={this.signIn.bind(this)}>
           <Text style={{fontWeight: '700', textAlign: 'center'}}>Login</Text>
         </Button>
-        {/* <Button rounded block style={{marginBottom: 10}}
-          onPress={this.signUp.bind(this)}>
-          <Text>Facebook</Text>
-        </Button>                        */}
+        <Button rounded block style={{marginBottom: 10}}
+          onPress={this.handleFB.bind(this)}>
+          <Text style={{fontWeight: '700', textAlign: 'center'}}>Facebook</Text>
+        </Button>                       
       </Form>               
     )
   }
