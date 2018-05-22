@@ -1,24 +1,99 @@
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import {
+  Container, 
+  Header,
+  Left, 
+  Body, 
+  Right, 
+  Button, 
+  Icon, 
+  Title,
+  Content, 
+  Form, 
+  Item, 
+  Input, 
+  Label,
+  List,
+  ListItem, 
+  Switch,
+  Text 
+} from 'native-base';
+import {
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Dimensions
+} from 'react-native';
 import { inject } from 'mobx-react';
 
+import FormView from '../components/signUp.component';
+
 @inject("stores")
-export default class SignUp extends Component {
+export default class signUp extends Component {
   constructor(props) {
     super(props)
   }
-  componentDidMount() {
-    const {stores, navigation } = this.props;
-    setTimeout(() => {
-      navigation.navigate("Login")
-    }, stores.config.SplashTime)
+
+
+  back() {
+    const { navigate } = this.props.navigation
+        navigate('Login')
   }
+  
   render() {
-    const { stores } = this.props
-    return (
-      <View style={{flex: 1}}>
-        <Image style={{flex: 1, width: null, height: null}} source={stores.config.SplashImg}/>
-      </View>
+    const {stores} = this.props
+    return ( 
+    <Container>
+      <Header>
+        <Left>
+        <Button transparent
+          onPress={this.back.bind(this)}>
+          <Icon name='arrow-back'/>        
+          <Title> Sign Up</Title>
+          </Button>
+        </Left>
+        <Body>
+          <Title></Title>
+        </Body>          
+      </Header>
+      <Content>
+        {/* form component */}
+        <FormView />                
+        {/* hiperlink text */}
+        <View style={styles.signUpContent}>              
+            <Text style={styles.signUpText}>Please read carefully the </Text>                
+            {/* Set Opacity when clicked btn SignUp */}
+            <TouchableOpacity>
+              <Text style={{color: 'blue'}}>                
+                terms & conditions
+              </Text>
+            </TouchableOpacity>
+        </View>
+      </Content>
+    </Container>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  signUpContent: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginVertical: 220
+
+  },
+  signUpText:{
+    color: '#808080',
+    fontSize: 16
+
+  }
+})
