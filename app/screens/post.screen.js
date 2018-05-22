@@ -44,7 +44,7 @@ export default class PostScreen extends Component {
   static navigationOptions = ({navigation}) => ({
     headerLeft: <Button transparent
       onPress={() => navigation.goBack(null)}>
-        <Icon name='chevron-left' style={{color: "#fff"}} size={28}/>
+        <Icon name='arrow-back' style={{color: "#fff"}} size={28}/>
       </Button>
   })
   componentDidMount() {
