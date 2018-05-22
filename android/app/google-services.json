@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "13865922790",
+    "firebase_url": "https://flashon-880e5.firebaseio.com",
+    "project_id": "flashon-880e5",
+    "storage_bucket": "flashon-880e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13865922790:android:e48bc5c091bda523",
+        "android_client_info": {
+          "package_name": "com.FlashOn.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13865922790-b44ftjo6efdafodcv02c94in00cg2pd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoasHXwOZiw16CJ7YOW-Hbh520mbO-Vu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
