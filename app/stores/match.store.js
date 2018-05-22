@@ -12,18 +12,18 @@ export default class MatchStore extends MobxFirebaseStore {
   resolveFirebaseQuery(sub) {
     return this.fb.child(sub.path).orderByChild('viewedBy/'+this.user.uid).equalTo(null)
   }
-  @action
-  markViewed(post) {
-    let updates = {};
-    updates['viewedBy/'+this.user.uid] = true;
-    this.fb.child('posts').child(post).update(updates)
-  }
-  subs() {
-    return [{
-      subKey: 'matches',
-      path: 'posts',
-      asList: true,
-      user: this.user
-    }]
-  }
+  // @action
+  // markViewed(post) {
+  //   let updates = {};
+  //   updates['viewedBy/'+this.user.uid] = true;
+  //   this.fb.child('posts').child(post).update(updates)
+  // }
+  // subs() {
+  //   return [{
+  //     subKey: 'matches',
+  //     path: 'posts',
+  //     asList: true,
+  //     user: this.user
+  //   }]
+  // }
 }

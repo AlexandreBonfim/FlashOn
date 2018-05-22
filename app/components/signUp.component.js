@@ -20,7 +20,7 @@ import {
 } from 'native-base';
 export default class SignUp extends Component {
   
-  Lofinpage() {
+  Loginpage() {
     const { navigate } = this.props.navigation
         navigate('Login')
   }
@@ -49,7 +49,7 @@ export default class SignUp extends Component {
               </ListItem>
             </List>
             <Button rounded block style={{marginBottom: 10}}
-              onPress={this.Lofinpage.bind(this)}>
+              onPress={this.Loginpage.bind(this)}>
               <Text style={{fontWeight: '700', textAlign: 'center'}}>Join</Text>
             </Button>
           </Form>

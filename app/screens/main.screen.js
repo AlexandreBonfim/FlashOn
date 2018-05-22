@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { View, Image, Text } from 'react-native';
 import {
   Container,
   Content,
@@ -6,10 +7,12 @@ import {
   Button
 } from 'native-base';
 import {inject} from 'mobx-react';
-import Match from '../components/main.component';
+import Main from '../components/main.component';
+import Swiper from 'react-native-swiper';
+
 
 @inject("stores")
-export default class MatchScreen extends Component {
+export default class MainScreen extends Component {
   constructor(props) {
     super(props);
   }
@@ -21,11 +24,8 @@ export default class MatchScreen extends Component {
   })
   render() {
     return (
-      <Container>
-        <Content scrollEnabled={false} style={{backgroundColor:"#858585"}}>
-          <Match stores={this.props.stores}/>
-        </Content>
-      </Container>
+      <Main />
     )
   }
 }
+
