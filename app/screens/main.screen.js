@@ -24,7 +24,7 @@ export default class MainScreen extends Component {
   })
   render() {
     return (
-      <Main />
+      <Main {...this.props}/>
     )
   }
 }

@@ -3,15 +3,20 @@ import { Text, View } from 'react-native';
 import { Container, Header, Content, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
-
+import { inject } from 'mobx-react';
+@inject("stores")
 export default class Options extends Component {
-
+    constructor(props) {
+        super(props)
+      }
+    
     redirectoToPlaces() {
         const { navigate } = this.props.navigation
             navigate('Places');
     }
 
     render() {
+        const {stores} = this.props
         return (
             <Grid style={{margin: 3}}>
                 <Row> 

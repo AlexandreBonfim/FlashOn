@@ -13,7 +13,7 @@ import {
 
 const hiddenItems = [
   'Login',
-  'Main'
+  // 'Main'
 ];
 
 const SideBar = (props) => {

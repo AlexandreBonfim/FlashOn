@@ -8,6 +8,10 @@ import Swiper from 'react-native-swiper';
 import Options from './options.component';
 
 export default class LandingPage extends Component {
+  constructor(props) {
+    super(props)
+  }
+  
   render() {
     return (
       <Container scrollEnabled={false}>
@@ -44,7 +48,7 @@ export default class LandingPage extends Component {
                 />
               </View>
           </Swiper>
-          <Options />
+          <Options {...this.props}/>
         </Content>
       </Container>
     )

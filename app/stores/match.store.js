@@ -9,9 +9,9 @@ export default class MatchStore extends MobxFirebaseStore {
       this.user = user;
     })
   }
-  resolveFirebaseQuery(sub) {
-    return this.fb.child(sub.path).orderByChild('viewedBy/'+this.user.uid).equalTo(null)
-  }
+  // resolveFirebaseQuery(sub) {
+  //   return this.fb.child(sub.path).orderByChild('viewedBy/'+this.user.uid).equalTo(null)
+  // }
   // @action
   // markViewed(post) {
   //   let updates = {};

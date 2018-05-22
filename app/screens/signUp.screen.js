@@ -26,7 +26,6 @@ export default class signUp extends Component {
     super(props)
   }
 
-
   back() {
     const { navigate } = this.props.navigation
         navigate('Login')
@@ -50,7 +49,7 @@ export default class signUp extends Component {
       </Header>
       <Content>
         {/* form component */}
-        <FormView />                
+        <FormView {...this.props}/>                
         {/* hiperlink text */}
         <View style={styles.signUpContent}>              
             <Text style={styles.signUpText}>Please read carefully the </Text>                
