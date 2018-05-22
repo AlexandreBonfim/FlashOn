@@ -9,21 +9,12 @@ import {
   Icon, 
   Title,
   Content, 
-  Form, 
-  Item, 
-  Input, 
-  Label,
-  List,
-  ListItem, 
-  Switch,
   Text 
 } from 'native-base';
 import {
   View,
-  Image,
   StyleSheet,
-  TouchableOpacity,
-  Dimensions
+  TouchableOpacity
 } from 'react-native';
 import { inject } from 'mobx-react';
 

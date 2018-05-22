@@ -1,6 +1,7 @@
 import React from 'react';
 import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 'react-navigation';
 import SignUpScreen from './screens/signUp.screen';
+import PlaceScreen from './screens/places.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
@@ -11,8 +12,8 @@ import {
 } from 'native-base';
 
 const hiddenItems = [
-  'Splash',
-  'Login'
+  'Login',
+  'Main'
 ];
 
 const SideBar = (props) => {
@@ -38,7 +39,16 @@ const MenuButton = ({navigate}) => (
 const SignUp = {
   screen: SignUpScreen,
   navigationOptions: {
-    header: null
+    header: null,
+    drawerLabel: 'SignUp'
+  }
+}
+
+const Places = {
+  screen: PlaceScreen,
+  navigationOptions: {
+    header: null,
+    drawerLabel: 'Places'
   }
 }
 
@@ -48,13 +58,6 @@ const Login = {
     header: null
   }
 }
-// const SignUp = {
-//   screen: SignUp,
-//   navigationOptions: {
-//     headerMode: 'screen',
-//     headerTitle: 'Sign Up'
-//   }
-// }
 
 const Main = {
   screen: MainScreen,
@@ -73,7 +76,6 @@ const Post = {
 }
 const MatchStack = StackNavigator({
   Main: Main,
-  SignUp: SignUp,
   Post: Post
 },{
   navigationOptions: ({navigation, HeaderProps}) => ({
@@ -91,7 +93,8 @@ const RouteConfig = {
 }
 const AppNavigator = DrawerNavigator({
   Login: Login,
-  Match: {screen: MatchStack}
+  Places: Places,
+  Main: {screen: MatchStack}
 },RouteConfig)
 
 export default AppNavigator;
