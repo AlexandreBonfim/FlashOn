@@ -15,7 +15,11 @@ export default class Options extends Component {
             navigate('Places');
     }
 
-    redirectToRates(){
+    redirectoToRecommendation() {
+        const { navigate } = this.props.navigation
+            navigate('Recommendations');
+    
+     redirectToRates(){
         const { navigate } = this.props.navigation
             navigate('Rates')
     }
@@ -46,6 +50,14 @@ export default class Options extends Component {
                     </Col>
                 </Row>
                 <Row style={{ backgroundColor: '#39A9B7', height: 170, margin: 2, alignItems: 'center',
+
+                                    justifyContent: 'center' }} >
+                        <Icon
+                                style={{color: 'white'}}
+                                name='list' 
+                                onPress={this.redirectoToRecommendation.bind(this)} 
+                        /> 
+                        <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}> RECOMMENDANTIONS </Text> 
                                 justifyContent: 'center' }} >
                     <Icon
                             style={{color: 'white'}}

@@ -18,10 +18,10 @@ import {
 } from 'react-native';
 import { inject } from 'mobx-react';
 
-import Places from '../components/places.component';
+import Recommendation from '../components/recommendation.component';
 
 @inject("stores")
-export default class PlacesScreen extends Component {
+export default class RecommendationScreen extends Component {
   constructor(props) {
     super(props)
   }
@@ -36,20 +36,20 @@ export default class PlacesScreen extends Component {
     const {stores} = this.props
     return ( 
     <Container>
-      <Header style={{ backgroundColor: '#39A9B7'}}>
+      <Header>
         <Left>
         <Button transparent
           onPress={this.back.bind(this)}>
           <Icon name='arrow-back'/>        
-          <Title> Places</Title>
+          <Title> Recommendations</Title>
           </Button>
         </Left>
         <Body>
           <Title></Title>
         </Body>          
-      </Header>
-      <Places/>
-      <Content>        
+      </Header>   
+      <Content>  
+      <Recommendation/>      
       </Content>
     </Container>
     )
@@ -57,10 +57,12 @@ export default class PlacesScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-  }
-})
+    container: {
+      flex: 1,  
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+    }
+    
+  })
