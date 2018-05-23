@@ -2,6 +2,7 @@ import React from 'react';
 import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 'react-navigation';
 import SignUpScreen from './screens/signUp.screen';
 import PlaceScreen from './screens/places.screen';
+import RatesScreen from './screens/rates.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
@@ -52,6 +53,14 @@ const Places = {
   }
 }
 
+const Rates = {
+  screen: RatesScreen,
+  navigationOptions: {
+    header: null,
+    drawerLabel: 'Rates'
+  }
+}
+
 const Login = {
   screen: LoginScreen,
   navigationOptions: {
@@ -94,6 +103,7 @@ const RouteConfig = {
 const AppNavigator = DrawerNavigator({
   Login: Login,
   Places: Places,
+  Rates: Rates,
   Main: {screen: MatchStack}
 },RouteConfig)
 
