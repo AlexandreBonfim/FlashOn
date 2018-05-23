@@ -15,6 +15,11 @@ export default class Options extends Component {
             navigate('Places');
     }
 
+    redirectoToRecommendation() {
+        const { navigate } = this.props.navigation
+            navigate('Recommendations');
+    }
+
     render() {
         const {stores} = this.props
         return (
@@ -44,6 +49,7 @@ export default class Options extends Component {
                         <Icon
                                 style={{color: 'white'}}
                                 name='list' 
+                                onPress={this.redirectoToRecommendation.bind(this)} 
                         /> 
                         <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}> RECOMMENDANTIONS </Text> 
                 </Row>

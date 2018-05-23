@@ -1,6 +1,7 @@
 import React from 'react';
 import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 'react-navigation';
 import SignUpScreen from './screens/signUp.screen';
+import RecommendationScreen from './screens/recommend.screen';
 import PlaceScreen from './screens/places.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
@@ -12,8 +13,8 @@ import {
 } from 'native-base';
 
 const hiddenItems = [
-  'Login',
-  // 'Main'
+   'Login',
+   //'Main'
 ];
 
 const SideBar = (props) => {
@@ -52,6 +53,14 @@ const Places = {
   }
 }
 
+const Recommendations = {
+  screen: RecommendationScreen,
+  navigationOptions: {
+    header: null,
+    drawerLabel: 'Recommendations'
+  }
+}
+
 const Login = {
   screen: LoginScreen,
   navigationOptions: {
@@ -63,7 +72,7 @@ const Main = {
   screen: MainScreen,
   navigationOptions: {
     headerMode: 'screen',
-    headerTitle: 'Main',
+    //headerTitle: 'Main',
     drawerLabel: 'Main'
   }
 }
@@ -80,7 +89,7 @@ const MatchStack = StackNavigator({
 },{
   navigationOptions: ({navigation, HeaderProps}) => ({
     headerLeft: <MenuButton navigate={navigation.navigate}/>,
-    headerStyle: { backgroundColor: "#000"},
+    headerStyle: { backgroundColor: "#4054b2"},
     headerTintColor: "#fff"
   }) 
 })
@@ -94,6 +103,7 @@ const RouteConfig = {
 const AppNavigator = DrawerNavigator({
   Login: Login,
   Places: Places,
+  Recommendations: Recommendations,
   Main: {screen: MatchStack}
 },RouteConfig)
 
