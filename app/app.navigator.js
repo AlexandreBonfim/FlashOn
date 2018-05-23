@@ -60,7 +60,8 @@ const Recommendations = {
   navigationOptions: {
     header: null,
     drawerLabel: 'Recommendations'
-
+  }
+}
 const Rates = {
   screen: RatesScreen,
   navigationOptions: {

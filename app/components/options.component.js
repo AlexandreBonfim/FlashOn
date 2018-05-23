@@ -18,29 +18,29 @@ export default class Options extends Component {
     redirectoToRecommendation() {
         const { navigate } = this.props.navigation
             navigate('Recommendations');
-    
+    }
+
      redirectToRates(){
         const { navigate } = this.props.navigation
-            navigate('Rates')
+            navigate('Rates');
     }
 
     render() {
         const {stores} = this.props
         return (
             <Grid style={{margin: 3}}>
-                <Row> 
-                        
+                <Row>  
                     <Col style={{ backgroundColor: '#2A7F3C', height: 170, margin: 2, alignItems: 'center',
                                 justifyContent: 'center'}}>
                         <Icon
-                        style={{color: 'white'}}
-                        name='star'
-                        onPress={this.redirectToRates.bind(this)} 
+                            style={{color: 'white'}}
+                            name='star'
+                            onPress={this.redirectToRates.bind(this)} 
                         />
                         <Text style={{color: 'white', fontSize: 20}}> RATES </Text>
                     </Col>
                     <Col style={{ backgroundColor: '#FDAB29', height: 170, margin: 2, alignItems: 'center',
-                                justifyContent: 'center' }}>
+                                    justifyContent: 'center' }}>
                         <Icon
                             style={{color: 'white'}}
                             name='map' 
@@ -49,21 +49,13 @@ export default class Options extends Component {
                         <Text style={{color: 'white', fontSize: 20}}> PLACES </Text>
                     </Col>
                 </Row>
-                <Row style={{ backgroundColor: '#39A9B7', height: 170, margin: 2, alignItems: 'center',
-
-                                    justifyContent: 'center' }} >
-                        <Icon
-                                style={{color: 'white'}}
-                                name='list' 
-                                onPress={this.redirectoToRecommendation.bind(this)} 
-                        /> 
-                        <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}> RECOMMENDANTIONS </Text> 
-                                justifyContent: 'center' }} >
+                <Row style={{ backgroundColor: '#39A9B7', height: 170, margin: 2, alignItems: 'center', justifyContent: 'center' }} >
                     <Icon
-                            style={{color: 'white'}}
-                            name='list' 
+                        style={{color: 'white'}}
+                        name='list' 
+                        onPress={this.redirectoToRecommendation.bind(this)}
                     /> 
-                    <Text style={{color: 'white', fontSize: 20, marginLeft: 5}}> RECOMMENDANTIONS </Text> 
+                    <Text style={{color: 'white', fontSize: 20, marginLeft: 5, justifyContent: 'center' }}> RECOMMENDANTIONS </Text> 
                 </Row>
             </Grid>
         )
