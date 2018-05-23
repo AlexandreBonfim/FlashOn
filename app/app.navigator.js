@@ -3,6 +3,7 @@ import { DrawerNavigator, StackNavigator, DrawerItems, NavigationActions } from 
 import SignUpScreen from './screens/signUp.screen';
 import RecommendationScreen from './screens/recommend.screen';
 import PlaceScreen from './screens/places.screen';
+import RatesScreen from './screens/rates.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
@@ -53,11 +54,19 @@ const Places = {
   }
 }
 
+
 const Recommendations = {
   screen: RecommendationScreen,
   navigationOptions: {
     header: null,
     drawerLabel: 'Recommendations'
+
+const Rates = {
+  screen: RatesScreen,
+  navigationOptions: {
+    header: null,
+    drawerLabel: 'Rates'
+
   }
 }
 
@@ -104,6 +113,7 @@ const AppNavigator = DrawerNavigator({
   Login: Login,
   Places: Places,
   Recommendations: Recommendations,
+  Rates: Rates,
   Main: {screen: MatchStack}
 },RouteConfig)
 
