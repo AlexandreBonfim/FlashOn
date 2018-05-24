@@ -19,31 +19,31 @@ export default class LandingPage extends Component {
           <Swiper style={{height: 250}} autoplay={true}>
               <View style={{flex: 1}}>
                 <Image 
-                    source={require('../../assets/pic1.jpg')} 
+                    source={require('../../images/recommendations/dub-castle.jpg')} 
                     style={{ flex: 1, height: null, width: null}}
                 />
               </View>
               <View style={{flex: 1}}>
                 <Image 
-                    source={require('../../assets/pic2.jpg')} 
+                    source={require('../../images/recommendations/half-penny.jpg')} 
                     style={{ flex: 1, height: null, width: null}}
                 />
               </View>
               <View style={{flex: 1}}>
                 <Image 
-                    source={require('../../assets/pic3.jpg')} 
+                    source={require('../../images/recommendations/library.jpg')} 
                     style={{ flex: 1, height: null, width: null}}
                 />
               </View>
               <View style={{flex: 1}}>
                 <Image 
-                    source={require('../../assets/pic4.jpeg')} 
+                    source={require('../../images/recommendations/spire.jpg')} 
                     style={{ flex: 1, height: null, width: null}}
                 />
               </View>
               <View style={{flex: 1}}>
                 <Image 
-                    source={require('../../assets/pic5.jpg')} 
+                    source={require('../../images/recommendations/temple-bar.jpg')} 
                     style={{ flex: 1, height: null, width: null}}
                 />
               </View>
