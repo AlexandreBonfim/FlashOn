@@ -21,7 +21,7 @@ export default class Recommendation extends Component {
         
           <List>
             <ListItem>
-              <Thumbnail square size={280} source={stores.config.Spire} />
+              <Thumbnail  size={8} source={stores.config.Spire} />
               <Body>
                 <Text>Spire</Text>
                 <Text note>The Spire of Dublin, alternatively titled the Monument of Light, is a large, 
@@ -30,7 +30,7 @@ export default class Recommendation extends Component {
               </Body>
             </ListItem>
             <ListItem>
-            <Thumbnail square size={280} source={stores.config.Temple} />
+            <Thumbnail size={280} source={stores.config.Temple} />
               <Body>
                 <Text>Temple Bar</Text>
                 <Text note>Dublin's cultural quarter and has a lively nightlife that is popular 
@@ -39,7 +39,7 @@ export default class Recommendation extends Component {
               </Body>
             </ListItem>
             <ListItem>
-            <Thumbnail square size={280} source={stores.config.HalfPenny} />
+            <Thumbnail  size={280} source={stores.config.HalfPenny} />
               <Body>
                 <Text>Ha'Penny Bridge</Text>
                 <Text note>The Ha'penny Bridge, known later for a time as the Penny Ha'penny
@@ -49,7 +49,7 @@ export default class Recommendation extends Component {
               </Body>
             </ListItem>
             <ListItem>
-            <Thumbnail square size={280} source={stores.config.Library} />
+            <Thumbnail  size={280} source={stores.config.Library} />
               <Body>
                 <Text>Trinity College</Text>
                 <Text note>Holy and Undivided Trinity of Queen Elizabeth near Dublin, 
@@ -60,7 +60,7 @@ export default class Recommendation extends Component {
               </Body>
             </ListItem>
             <ListItem>
-            <Thumbnail rounded size={280} source={stores.config.DubCastle} />
+            <Thumbnail  size={280} source={stores.config.DubCastle} />
               <Body>
                 <Text>Dublin Castle</Text>
                 <Text note>Dublin Castle off Dame Street, Dublin, Ireland, was until 1922 the 

@@ -54,12 +54,13 @@ const Places = {
   }
 }
 
-
 const Recommendations = {
   screen: RecommendationScreen,
   navigationOptions: {
     header: null,
     drawerLabel: 'Recommendations'
+  }
+}
 
 const Rates = {
   screen: RatesScreen,

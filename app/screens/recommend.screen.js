@@ -41,7 +41,7 @@ export default class RecommendationScreen extends Component {
         <Button transparent
           onPress={this.back.bind(this)}>
           <Icon name='arrow-back'/>        
-          <Title> Recommendations</Title>
+          <Title>Recommendations</Title>
           </Button>
         </Left>
         <Body>
