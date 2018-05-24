@@ -26,7 +26,6 @@ export default class PlacesScreen extends Component {
     super(props)
   }
 
-
   back() {
     const { navigate } = this.props.navigation
         navigate('Main')
@@ -36,21 +35,21 @@ export default class PlacesScreen extends Component {
     const {stores} = this.props
     return ( 
     <Container>
-        <Header> {/*style={{ backgroundColor: '#39A9B7'}}*/}  
-        <Left>
-        <Button transparent
-          onPress={this.back.bind(this)}>
-          <Icon name='arrow-back'/>        
-          <Title> Places</Title>
-          </Button>
-        </Left>
-        <Body>
-          <Title></Title>
-        </Body>          
-      </Header>
-      <Places/>
-      <Content>        
-      </Content>
+        <Header>  
+          <Left>
+            <Button transparent
+              onPress={this.back.bind(this)}>
+              <Icon name='arrow-back'/>        
+              <Title> Places</Title>
+            </Button>
+          </Left>
+          <Body>
+            <Title></Title>
+          </Body>          
+        </Header>
+        <Places/>
+        {/* <Content>        
+        </Content> */}
     </Container>
     )
   }
