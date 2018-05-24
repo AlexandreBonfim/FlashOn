@@ -37,7 +37,8 @@ export default class PlacesScreen extends Component {
     <Container>
         <Header>  
           <Left>
-            <Button transparent onPress={this.back.bind(this)}>
+            <Button transparent
+              onPress={this.back.bind(this)}>
               <Icon name='arrow-back'/>        
               <Title> Places</Title>
             </Button>
@@ -45,10 +46,10 @@ export default class PlacesScreen extends Component {
           <Body>
             <Title></Title>
           </Body>          
-        </Header>     
-      {/* <Content> */}
-        <Places/>        
-      {/* </Content> */}
+        </Header>
+        <Places/>
+        {/* <Content>        
+        </Content> */}
     </Container>
     )
   }
