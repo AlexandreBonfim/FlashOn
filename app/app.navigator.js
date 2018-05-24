@@ -23,8 +23,15 @@ const SideBar = (props) => {
   }
   return (
     <ScrollView>
-      {/* <PictureFromFB /> */}
-      <Image style={styles.menuImage} source={require('../images/rates/download.jpeg')} />
+      <Header style ={{ height:200 }} >
+        <Body style={{justifyContent: 'center'}}>
+          <Image style={styles.menuImage} source={require('../images/rates/download.jpg')} />
+          <Text style ={{ color: 'white', fontSize: 18, marginBottom: 25, marginTop: 10 }}>
+                  Welcome Awesome Graduate
+          </Text>
+        </Body>
+        
+      </Header>
       <DrawerItems {...propsClone}/>
     </ScrollView>
   )
@@ -110,25 +117,6 @@ const RouteConfig = {
   }
 }
 
-//
-const PictureFromFB = (props) => (
-  <Container>
-      <Header style ={{ height:200 }} >
-          <Body>
-              <Image style={styles.menuImage} source={require('../images/rates/download.jpeg')} />
-              <Text 
-                  style ={{ color: 'white', fontSize: 20 }}>
-                      Welcome Username
-              </Text>
-          </Body>
-      </Header>
-      {/* <Content>
-          <DrawerItems {...props} />
-      </Content> */}
-  </Container>
-)
-//
-
 const AppNavigator = DrawerNavigator({
   Login: Login,
   Places: Places,
@@ -143,7 +131,7 @@ const styles = StyleSheet.create({
       width: 150,
       borderRadius: 75,
       marginLeft: 50,
-      marginTop: 30
+      marginTop: 70
   }
 })
 
