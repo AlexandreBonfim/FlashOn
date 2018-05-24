@@ -7,11 +7,9 @@ import RatesScreen from './screens/rates.screen';
 import LoginScreen from './screens/login.screen';
 import MainScreen from './screens/main.screen';
 import PostScreen from './screens/post.screen';
-import {ScrollView } from 'react-native';
-import {
-  Button,
-  Icon
-} from 'native-base';
+import {ScrollView, StyleSheet, Image, Text, View } from 'react-native';
+
+import { Container, Content, Header, Body, Icon, Button } from 'native-base'
 
 const hiddenItems = [
    'Login',
@@ -25,6 +23,15 @@ const SideBar = (props) => {
   }
   return (
     <ScrollView>
+      <Header style ={{ height:200 }} >
+        <Body style={{justifyContent: 'center'}}>
+          <Image style={styles.menuImage} source={require('../images/rates/download.jpg')} />
+          <Text style ={{ color: 'white', fontSize: 18, marginBottom: 25, marginTop: 10 }}>
+                  Welcome Awesome Graduate
+          </Text>
+        </Body>
+        
+      </Header>
       <DrawerItems {...propsClone}/>
     </ScrollView>
   )
@@ -61,7 +68,6 @@ const Recommendations = {
     drawerLabel: 'Recommendations'
   }
 }
-
 const Rates = {
   screen: RatesScreen,
   navigationOptions: {
@@ -110,6 +116,7 @@ const RouteConfig = {
     gesturesEnabled: false
   }
 }
+
 const AppNavigator = DrawerNavigator({
   Login: Login,
   Places: Places,
@@ -117,5 +124,15 @@ const AppNavigator = DrawerNavigator({
   Rates: Rates,
   Main: {screen: MatchStack}
 },RouteConfig)
+
+const styles = StyleSheet.create({
+  menuImage: {
+      height: 150,
+      width: 150,
+      borderRadius: 75,
+      marginLeft: 50,
+      marginTop: 70
+  }
+})
 
 export default AppNavigator;

@@ -8,7 +8,7 @@ export default class ReatedPlaces extends Component {
     return (
         <View>
             <CardItem>
-                <View style={{align: 'center'}}>
+                <View >
                     <Image style={{height:190, width:190, borderRadius:100}} source={this.props.imageUri} />
                 </View>
                 <Right style={{flex: 1, alignItems: 'flex-start', height: 90, paddingHorizontal: 20}}>

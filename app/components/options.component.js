@@ -22,26 +22,25 @@ export default class Options extends Component {
 
      redirectToRates(){
         const { navigate } = this.props.navigation
-            navigate('Rates')
+            navigate('Rates');
     }
 
     render() {
         const {stores} = this.props
         return (
             <Grid style={{margin: 3}}>
-                <Row> 
-                        
+                <Row>  
                     <Col style={{ backgroundColor: '#2A7F3C', height: 170, margin: 2, alignItems: 'center',
                                 justifyContent: 'center'}}>
                         <Icon
-                        style={{color: 'white'}}
-                        name='star'
-                        onPress={this.redirectToRates.bind(this)} 
+                            style={{color: 'white'}}
+                            name='star'
+                            onPress={this.redirectToRates.bind(this)} 
                         />
                         <Text style={{color: 'white', fontSize: 20}}> RATES </Text>
                     </Col>
                     <Col style={{ backgroundColor: '#FDAB29', height: 170, margin: 2, alignItems: 'center',
-                                justifyContent: 'center' }}>
+                                    justifyContent: 'center' }}>
                         <Icon
                             style={{color: 'white'}}
                             name='map' 

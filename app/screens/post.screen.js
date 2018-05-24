@@ -10,7 +10,11 @@ import {
   Input,
   Card,
   CardItem,
-  Spinner
+  Spinner, 
+  Thumbnail, 
+  Left,
+  Right,
+  Body
 } from 'native-base';
 import { Image } from 'react-native';
 import { inject } from 'mobx-react';
@@ -67,22 +71,53 @@ export default class PostScreen extends Component {
     return (
       <Container>
         <Content style={{backgroundColor: "#858585"}}>
-          {this.uploading ? <Spinner/> : null}
+          {/* {this.uploading ? <Spinner/> : null} */}
           <Card>
             <CardItem cardBody>
               {this.image ? <Image style={{height: 200, width: null, flex: 1}} source={this.image} /> : null}
             </CardItem>
+            {/*  */}
             <CardItem>
-              <Form>
-                <Item borderType='underline'>
+              <Left>
+                <Thumbnail source={require('../../images/ireland.png')} />
+                <Body>
+                  <Text></Text>
+                  <Text note>GeekyAnts</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={require('../../images/molly-malone.jpg')} style={{height: 250, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </CardItem>
+            {/*  */}
+            <CardItem style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Form >
+                <Item borderType='underline' style={{width: 350}}>
                   <Input style={{color: 'black'}}
                     placeholderTextColor='black'
-                    placeholder='Enter Post Text'
+                    placeholder='TestTest'
                     onChangeText={(text) => this.text = text}/>
                 </Item>
                 <Button rounded block
                   onPress={this.post.bind(this)}>
-                  <Text>Share!</Text>
+                  <Text style={{fontWeight: 'bold'}}>SHARE</Text>
                 </Button>
               </Form>
             </CardItem>
