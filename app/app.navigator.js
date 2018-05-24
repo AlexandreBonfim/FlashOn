@@ -13,7 +13,7 @@ import { Container, Content, Header, Body, Icon, Button } from 'native-base'
 
 const hiddenItems = [
    'Login',
-   //'Main'
+   'Main'
 ];
 
 const SideBar = (props) => {
@@ -57,7 +57,8 @@ const Places = {
   screen: PlaceScreen,
   navigationOptions: {
     header: null,
-    drawerLabel: 'Places'
+    //changed name test only
+    drawerLabel: 'Settings'
   }
 }
 
@@ -65,14 +66,16 @@ const Recommendations = {
   screen: RecommendationScreen,
   navigationOptions: {
     header: null,
-    drawerLabel: 'Recommendations'
+    //changed name test only
+    drawerLabel: 'Feedback'
   }
 }
 const Rates = {
   screen: RatesScreen,
   navigationOptions: {
     header: null,
-    drawerLabel: 'Rates'
+    //changed name test only
+    drawerLabel: 'Logout'
 
   }
 }

@@ -4,6 +4,10 @@
  * @flow
  */
 
+console.ignoredYellowBox = [
+  'Setting a timer'
+  ]
+  
 import React, { Component } from 'react';
 import { Provider } from 'mobx-react'; //provide stores various components
 
