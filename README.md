@@ -65,6 +65,11 @@ You'd want to generate a signing key and build the apk like [here](https://faceb
 * [react-native-image-picker@latest --save](https://github.com/lwansbrough/react-native-camera) - A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera.
 * [mobx --save](https://mobx.js.org/) - MobX is a battle tested library that makes state management simple and scalable by transparently applying functional reactive programming (TFRP). The philosophy behind MobX is very simple: Anything that can be derived from the application state, should be derived. Automatically.
 
+## Authors
+
+* **Alexandre Bonfim** - *Initial work* - [GitHub](https://github.com/AlexandreBonfim) / [LinkedIn](https://www.linkedin.com/in/alexandre-bonfim/)
+
+* **Pedro Santos**     - *Initial work* - [GitHub](https://github.com/pedropaulo15) / [LinkedIn](https://www.linkedin.com/in/pedropmsantos/)
 
 
 ## Contributing
